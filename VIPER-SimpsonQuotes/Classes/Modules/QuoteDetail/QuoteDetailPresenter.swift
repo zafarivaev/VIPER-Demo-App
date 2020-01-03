@@ -16,7 +16,7 @@ class QuoteDetailPresenter: ViewToPresenterQuoteDetailProtocol {
     var router: PresenterToRouterQuoteDetailProtocol?
     
     func viewDidLoad() {
-        print("Presenter is instructed to get image from url.")
+        print("Presenter is being notified that the View was loaded.")
         interactor?.getImageDataFromURL()
     }
     
