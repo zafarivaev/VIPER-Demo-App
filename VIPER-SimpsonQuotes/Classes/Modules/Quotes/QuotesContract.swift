@@ -32,6 +32,8 @@ protocol ViewToPresenterQuotesProtocol {
     
     func viewDidLoad()
     
+    func refresh()
+    
     func numberOfRowsInSection() -> Int
     func textLabelText(indexPath: IndexPath) -> String?
     

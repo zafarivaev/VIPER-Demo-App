@@ -24,6 +24,11 @@ class QuotesPresenter: ViewToPresenterQuotesProtocol {
         interactor?.loadQuotes()
     }
     
+    func refresh() {
+        print("Presenter is being notified that the View was refreshed.")
+        interactor?.loadQuotes()
+    }
+    
     func numberOfRowsInSection() -> Int {
         guard let quotesStrings = self.quotesStrings else {
             return 0

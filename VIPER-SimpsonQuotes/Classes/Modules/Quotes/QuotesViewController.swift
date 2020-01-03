@@ -18,6 +18,11 @@ class QuotesViewController: UIViewController {
         
         presenter?.viewDidLoad()
     }
+    
+    // MARK: - Actions
+    @objc func refresh() {
+        presenter?.refresh()
+    }
 
     // MARK: - Properties
     var presenter: ViewToPresenterQuotesProtocol?
@@ -30,6 +35,13 @@ class QuotesViewController: UIViewController {
         return tableView
     }()
     
+    lazy var refreshControl: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.attributedTitle = NSAttributedString(string: "Refreshing")
+        refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
+        return refreshControl
+    }()
+    
 }
 
 extension QuotesViewController: PresenterToViewQuotesProtocol{
@@ -37,10 +49,12 @@ extension QuotesViewController: PresenterToViewQuotesProtocol{
     func onFetchQuotesSuccess() {
         print("View receives the response from Presenter and updates itself.")
         self.tableView.reloadData()
+        self.refreshControl.endRefreshing()
     }
     
     func onFetchQuotesFailure(error: String) {
-        print("View receives the response from Presenter and prints error: \(error)")
+        print("View receives the response from Presenter with error: \(error)")
+        self.refreshControl.endRefreshing()
     }
     
     func showHUD() {
@@ -54,6 +68,7 @@ extension QuotesViewController: PresenterToViewQuotesProtocol{
     func deselectRowAt(row: Int) {
         self.tableView.deselectRow(at: IndexPath(row: row, section: 0), animated: true)
     }
+    
 }
 
 // MARK: - UITableView Delegate & Data Source
@@ -80,10 +95,12 @@ extension QuotesViewController {
     func setupUI() {
         overrideUserInterfaceStyle = .light
         self.view.addSubview(tableView)
+        tableView.addSubview(refreshControl)
         
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.widthAnchor.constraint(equalTo: self.view.widthAnchor).isActive = true
         tableView.heightAnchor.constraint(equalTo: self.view.heightAnchor).isActive = true
 
+        self.navigationItem.title = "Simpsons Quotes"
     }
 }
