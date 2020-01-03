@@ -26,17 +26,5 @@ class KingfisherService {
             }
         }
        
-//        let resource = ImageResource(downloadURL: url)
-//
-//        KingfisherManager.shared.retrieveImage(with: resource, options: nil, progressBlock: nil) { result in
-//            switch result {
-//            case .success(let value):
-//                print("Image: \(value.image). Got from: \(value.cacheType)")
-//                success(value.image)
-//            case .failure(let error):
-//                print("Error: \(error)")
-//                failure(error)
-//            }
-//        }
     }
 }
