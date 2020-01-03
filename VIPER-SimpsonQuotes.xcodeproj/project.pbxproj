@@ -3,27 +3,61 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		1C01723A23BD115E00B80FCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C01723923BD115E00B80FCE /* AppDelegate.swift */; };
-		1C01723C23BD115E00B80FCE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C01723B23BD115E00B80FCE /* SceneDelegate.swift */; };
-		1C01723E23BD115E00B80FCE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C01723D23BD115E00B80FCE /* ViewController.swift */; };
-		1C01724123BD115E00B80FCE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C01723F23BD115E00B80FCE /* Main.storyboard */; };
 		1C01724323BD116000B80FCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C01724223BD116000B80FCE /* Assets.xcassets */; };
 		1C01724623BD116000B80FCE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C01724423BD116000B80FCE /* LaunchScreen.storyboard */; };
+		1C3331CB23BE219D006A6DD4 /* QuotesContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3331C623BE219D006A6DD4 /* QuotesContract.swift */; };
+		1C3331CC23BE219D006A6DD4 /* QuotesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3331C723BE219D006A6DD4 /* QuotesPresenter.swift */; };
+		1C3331CD23BE219D006A6DD4 /* QuotesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3331C823BE219D006A6DD4 /* QuotesRouter.swift */; };
+		1C3331CE23BE219D006A6DD4 /* QuotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3331C923BE219D006A6DD4 /* QuotesViewController.swift */; };
+		1C3331CF23BE219D006A6DD4 /* QuotesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3331CA23BE219D006A6DD4 /* QuotesInteractor.swift */; };
+		1C3331D523BE2E55006A6DD4 /* APIQuote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3331D423BE2E55006A6DD4 /* APIQuote.swift */; };
+		1CDEB5BD23BF22A200487615 /* ImageDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CDEB5BC23BF22A200487615 /* ImageDataService.swift */; };
+		1CDEB5BF23BF23DA00487615 /* ConvertedQuote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CDEB5BE23BF23DA00487615 /* ConvertedQuote.swift */; };
+		1CDEB5C123BF28B400487615 /* KingfisherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CDEB5C023BF28B400487615 /* KingfisherService.swift */; };
+		1CE0CA7223BE483D000B6E63 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE0CA7123BE483D000B6E63 /* APIManager.swift */; };
+		1CE0CA7423BE4A02000B6E63 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE0CA7323BE4A02000B6E63 /* APIClient.swift */; };
+		1CE0CA7623BE4A0C000B6E63 /* QuoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE0CA7523BE4A0C000B6E63 /* QuoteService.swift */; };
+		1CE0CA7923BE52B9000B6E63 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE0CA7823BE52B9000B6E63 /* Endpoints.swift */; };
+		1CE0CA8023BE72F1000B6E63 /* QuoteDetailContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE0CA7B23BE72F1000B6E63 /* QuoteDetailContract.swift */; };
+		1CE0CA8123BE72F1000B6E63 /* QuoteDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE0CA7C23BE72F1000B6E63 /* QuoteDetailPresenter.swift */; };
+		1CE0CA8223BE72F1000B6E63 /* QuoteDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE0CA7D23BE72F1000B6E63 /* QuoteDetailRouter.swift */; };
+		1CE0CA8323BE72F1000B6E63 /* QuoteDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE0CA7E23BE72F1000B6E63 /* QuoteDetailViewController.swift */; };
+		1CE0CA8423BE72F1000B6E63 /* QuoteDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE0CA7F23BE72F1000B6E63 /* QuoteDetailInteractor.swift */; };
+		B85DD5AC0F1FB2BAD43BF603 /* Pods_VIPER_SimpsonQuotes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 353C9E829765A5A869222A0A /* Pods_VIPER_SimpsonQuotes.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1C01723623BD115E00B80FCE /* VIPER-SimpsonQuotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VIPER-SimpsonQuotes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C01723923BD115E00B80FCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1C01723B23BD115E00B80FCE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1C01723D23BD115E00B80FCE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1C01724023BD115E00B80FCE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1C01724223BD116000B80FCE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1C01724523BD116000B80FCE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1C01724723BD116000B80FCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1C3331C623BE219D006A6DD4 /* QuotesContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesContract.swift; sourceTree = "<group>"; };
+		1C3331C723BE219D006A6DD4 /* QuotesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesPresenter.swift; sourceTree = "<group>"; };
+		1C3331C823BE219D006A6DD4 /* QuotesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesRouter.swift; sourceTree = "<group>"; };
+		1C3331C923BE219D006A6DD4 /* QuotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesViewController.swift; sourceTree = "<group>"; };
+		1C3331CA23BE219D006A6DD4 /* QuotesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesInteractor.swift; sourceTree = "<group>"; };
+		1C3331D423BE2E55006A6DD4 /* APIQuote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIQuote.swift; sourceTree = "<group>"; };
+		1CDEB5BC23BF22A200487615 /* ImageDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDataService.swift; sourceTree = "<group>"; };
+		1CDEB5BE23BF23DA00487615 /* ConvertedQuote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertedQuote.swift; sourceTree = "<group>"; };
+		1CDEB5C023BF28B400487615 /* KingfisherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingfisherService.swift; sourceTree = "<group>"; };
+		1CE0CA7123BE483D000B6E63 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		1CE0CA7323BE4A02000B6E63 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		1CE0CA7523BE4A0C000B6E63 /* QuoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteService.swift; sourceTree = "<group>"; };
+		1CE0CA7823BE52B9000B6E63 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
+		1CE0CA7B23BE72F1000B6E63 /* QuoteDetailContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteDetailContract.swift; sourceTree = "<group>"; };
+		1CE0CA7C23BE72F1000B6E63 /* QuoteDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteDetailPresenter.swift; sourceTree = "<group>"; };
+		1CE0CA7D23BE72F1000B6E63 /* QuoteDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteDetailRouter.swift; sourceTree = "<group>"; };
+		1CE0CA7E23BE72F1000B6E63 /* QuoteDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteDetailViewController.swift; sourceTree = "<group>"; };
+		1CE0CA7F23BE72F1000B6E63 /* QuoteDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteDetailInteractor.swift; sourceTree = "<group>"; };
+		353C9E829765A5A869222A0A /* Pods_VIPER_SimpsonQuotes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VIPER_SimpsonQuotes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA6C88131C16D1D4AB52D991 /* Pods-VIPER-SimpsonQuotes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPER-SimpsonQuotes.release.xcconfig"; path = "Target Support Files/Pods-VIPER-SimpsonQuotes/Pods-VIPER-SimpsonQuotes.release.xcconfig"; sourceTree = "<group>"; };
+		CEC362BD49CA21AB2DE407CA /* Pods-VIPER-SimpsonQuotes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPER-SimpsonQuotes.debug.xcconfig"; path = "Target Support Files/Pods-VIPER-SimpsonQuotes/Pods-VIPER-SimpsonQuotes.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B85DD5AC0F1FB2BAD43BF603 /* Pods_VIPER_SimpsonQuotes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +77,8 @@
 			children = (
 				1C01723823BD115E00B80FCE /* VIPER-SimpsonQuotes */,
 				1C01723723BD115E00B80FCE /* Products */,
+				3A053F7FB296357A9201E811 /* Pods */,
+				CC633B2809DABE84FCA18EB4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +93,143 @@
 		1C01723823BD115E00B80FCE /* VIPER-SimpsonQuotes */ = {
 			isa = PBXGroup;
 			children = (
-				1C01723923BD115E00B80FCE /* AppDelegate.swift */,
-				1C01723B23BD115E00B80FCE /* SceneDelegate.swift */,
-				1C01723D23BD115E00B80FCE /* ViewController.swift */,
-				1C01723F23BD115E00B80FCE /* Main.storyboard */,
-				1C01724223BD116000B80FCE /* Assets.xcassets */,
+				1C3331D123BE2D7E006A6DD4 /* Classes */,
+				1C3331D223BE2E14006A6DD4 /* Resources */,
+				1C01724D23BD116B00B80FCE /* Supporting Files */,
+			);
+			path = "VIPER-SimpsonQuotes";
+			sourceTree = "<group>";
+		};
+		1C01724D23BD116B00B80FCE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
 				1C01724423BD116000B80FCE /* LaunchScreen.storyboard */,
 				1C01724723BD116000B80FCE /* Info.plist */,
 			);
-			path = "VIPER-SimpsonQuotes";
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1C33319723BD122C006A6DD4 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				1C01723923BD115E00B80FCE /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		1C33319823BD1243006A6DD4 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				1C3331C523BE218F006A6DD4 /* Quotes */,
+				1CE0CA7A23BE72E1000B6E63 /* QuoteDetail */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		1C3331C523BE218F006A6DD4 /* Quotes */ = {
+			isa = PBXGroup;
+			children = (
+				1C3331C623BE219D006A6DD4 /* QuotesContract.swift */,
+				1C3331C723BE219D006A6DD4 /* QuotesPresenter.swift */,
+				1C3331C823BE219D006A6DD4 /* QuotesRouter.swift */,
+				1C3331C923BE219D006A6DD4 /* QuotesViewController.swift */,
+				1C3331CA23BE219D006A6DD4 /* QuotesInteractor.swift */,
+			);
+			path = Quotes;
+			sourceTree = "<group>";
+		};
+		1C3331D023BE2D77006A6DD4 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				1CE0CA7723BE52AE000B6E63 /* Endpoints */,
+				1C3331D323BE2E4C006A6DD4 /* Entities */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		1C3331D123BE2D7E006A6DD4 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1C33319723BD122C006A6DD4 /* App */,
+				1C33319823BD1243006A6DD4 /* Modules */,
+				1C3331D023BE2D77006A6DD4 /* Common */,
+				1CE0CA6F23BE47C6000B6E63 /* Managers */,
+				1CE0CA7023BE47D4000B6E63 /* Services */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		1C3331D223BE2E14006A6DD4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1C01724223BD116000B80FCE /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1C3331D323BE2E4C006A6DD4 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				1C3331D423BE2E55006A6DD4 /* APIQuote.swift */,
+				1CDEB5BE23BF23DA00487615 /* ConvertedQuote.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		1CE0CA6F23BE47C6000B6E63 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				1CE0CA7123BE483D000B6E63 /* APIManager.swift */,
+				1CE0CA7323BE4A02000B6E63 /* APIClient.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		1CE0CA7023BE47D4000B6E63 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1CE0CA7523BE4A0C000B6E63 /* QuoteService.swift */,
+				1CDEB5BC23BF22A200487615 /* ImageDataService.swift */,
+				1CDEB5C023BF28B400487615 /* KingfisherService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		1CE0CA7723BE52AE000B6E63 /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+				1CE0CA7823BE52B9000B6E63 /* Endpoints.swift */,
+			);
+			path = Endpoints;
+			sourceTree = "<group>";
+		};
+		1CE0CA7A23BE72E1000B6E63 /* QuoteDetail */ = {
+			isa = PBXGroup;
+			children = (
+				1CE0CA7B23BE72F1000B6E63 /* QuoteDetailContract.swift */,
+				1CE0CA7C23BE72F1000B6E63 /* QuoteDetailPresenter.swift */,
+				1CE0CA7D23BE72F1000B6E63 /* QuoteDetailRouter.swift */,
+				1CE0CA7E23BE72F1000B6E63 /* QuoteDetailViewController.swift */,
+				1CE0CA7F23BE72F1000B6E63 /* QuoteDetailInteractor.swift */,
+			);
+			path = QuoteDetail;
+			sourceTree = "<group>";
+		};
+		3A053F7FB296357A9201E811 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CEC362BD49CA21AB2DE407CA /* Pods-VIPER-SimpsonQuotes.debug.xcconfig */,
+				BA6C88131C16D1D4AB52D991 /* Pods-VIPER-SimpsonQuotes.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CC633B2809DABE84FCA18EB4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				353C9E829765A5A869222A0A /* Pods_VIPER_SimpsonQuotes.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +239,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1C01724A23BD116000B80FCE /* Build configuration list for PBXNativeTarget "VIPER-SimpsonQuotes" */;
 			buildPhases = (
+				9F0257546F8ECE1EEAA76E5B /* [CP] Check Pods Manifest.lock */,
 				1C01723223BD115E00B80FCE /* Sources */,
 				1C01723323BD115E00B80FCE /* Frameworks */,
 				1C01723423BD115E00B80FCE /* Resources */,
+				8FAF4F37BF1DA1B429C17054 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -127,34 +294,83 @@
 			files = (
 				1C01724623BD116000B80FCE /* LaunchScreen.storyboard in Resources */,
 				1C01724323BD116000B80FCE /* Assets.xcassets in Resources */,
-				1C01724123BD115E00B80FCE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8FAF4F37BF1DA1B429C17054 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VIPER-SimpsonQuotes/Pods-VIPER-SimpsonQuotes-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VIPER-SimpsonQuotes/Pods-VIPER-SimpsonQuotes-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VIPER-SimpsonQuotes/Pods-VIPER-SimpsonQuotes-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9F0257546F8ECE1EEAA76E5B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VIPER-SimpsonQuotes-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1C01723223BD115E00B80FCE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C01723E23BD115E00B80FCE /* ViewController.swift in Sources */,
+				1CDEB5C123BF28B400487615 /* KingfisherService.swift in Sources */,
+				1CE0CA7223BE483D000B6E63 /* APIManager.swift in Sources */,
+				1CDEB5BF23BF23DA00487615 /* ConvertedQuote.swift in Sources */,
+				1C3331CC23BE219D006A6DD4 /* QuotesPresenter.swift in Sources */,
+				1CE0CA8423BE72F1000B6E63 /* QuoteDetailInteractor.swift in Sources */,
+				1CE0CA7623BE4A0C000B6E63 /* QuoteService.swift in Sources */,
+				1CE0CA8323BE72F1000B6E63 /* QuoteDetailViewController.swift in Sources */,
+				1C3331CF23BE219D006A6DD4 /* QuotesInteractor.swift in Sources */,
+				1CE0CA8223BE72F1000B6E63 /* QuoteDetailRouter.swift in Sources */,
+				1C3331CB23BE219D006A6DD4 /* QuotesContract.swift in Sources */,
+				1CDEB5BD23BF22A200487615 /* ImageDataService.swift in Sources */,
+				1C3331CE23BE219D006A6DD4 /* QuotesViewController.swift in Sources */,
 				1C01723A23BD115E00B80FCE /* AppDelegate.swift in Sources */,
-				1C01723C23BD115E00B80FCE /* SceneDelegate.swift in Sources */,
+				1C3331D523BE2E55006A6DD4 /* APIQuote.swift in Sources */,
+				1C3331CD23BE219D006A6DD4 /* QuotesRouter.swift in Sources */,
+				1CE0CA7423BE4A02000B6E63 /* APIClient.swift in Sources */,
+				1CE0CA8123BE72F1000B6E63 /* QuoteDetailPresenter.swift in Sources */,
+				1CE0CA7923BE52B9000B6E63 /* Endpoints.swift in Sources */,
+				1CE0CA8023BE72F1000B6E63 /* QuoteDetailContract.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		1C01723F23BD115E00B80FCE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1C01724023BD115E00B80FCE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		1C01724423BD116000B80FCE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -282,11 +498,12 @@
 		};
 		1C01724B23BD116000B80FCE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CEC362BD49CA21AB2DE407CA /* Pods-VIPER-SimpsonQuotes.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MJWVGRX9VD;
-				INFOPLIST_FILE = "VIPER-SimpsonQuotes/Info.plist";
+				INFOPLIST_FILE = "VIPER-SimpsonQuotes/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,11 +517,12 @@
 		};
 		1C01724C23BD116000B80FCE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA6C88131C16D1D4AB52D991 /* Pods-VIPER-SimpsonQuotes.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MJWVGRX9VD;
-				INFOPLIST_FILE = "VIPER-SimpsonQuotes/Info.plist";
+				INFOPLIST_FILE = "VIPER-SimpsonQuotes/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
