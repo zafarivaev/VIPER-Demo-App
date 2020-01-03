@@ -30,14 +30,17 @@ class APIClient {
             "Content-Type": "application/json"
         ]
         
-        guard let URL = NSURL(string: urlString , relativeTo: self.baseURL as URL?) else {
+        guard let url = NSURL(string: urlString , relativeTo: self.baseURL as URL?) else {
             return
         }
         
-        let URLString = URL.absoluteString!
+        let urlString = url.absoluteString!
         
         Alamofire
-            .request(URLString, method: .get, encoding: JSONEncoding.default, headers: headers)
+            .request(urlString,
+                     method: .get,
+                     encoding: JSONEncoding.default,
+                     headers: headers)
             .responseArray { (dataResponse: DataResponse<[T]>) in
                 
                 guard let serverResponse = dataResponse.response,

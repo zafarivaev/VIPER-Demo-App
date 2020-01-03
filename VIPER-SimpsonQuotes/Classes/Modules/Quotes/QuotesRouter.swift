@@ -15,6 +15,7 @@ class QuotesRouter: PresenterToRouterQuotesProtocol {
     // MARK: Static methods
     static func createModule() -> UINavigationController {
         
+        print("QuotesRouter creates the Quotes module.")
         let viewController = QuotesViewController()
         let navigationController = UINavigationController(rootViewController: viewController)
         
@@ -31,7 +32,7 @@ class QuotesRouter: PresenterToRouterQuotesProtocol {
     
     // MARK: - Navigation
     func pushToQuoteDetail(on view: PresenterToViewQuotesProtocol, with quote: APIQuote) {
-        
+        print("QuotesRouter is instructed to push QuoteDetailViewController onto the navigation stack.")
         let quoteDetailViewController = QuoteDetailRouter.createModule(with: quote)
             
         let viewController = view as! QuotesViewController

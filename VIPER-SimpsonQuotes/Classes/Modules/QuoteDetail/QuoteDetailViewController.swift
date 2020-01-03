@@ -82,7 +82,4 @@ extension QuoteDetailViewController {
             .isActive = true
     }
     
-    func setupNavBar() {
-        
-    }
 }

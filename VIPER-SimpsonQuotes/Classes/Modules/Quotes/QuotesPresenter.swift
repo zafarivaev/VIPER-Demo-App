@@ -15,18 +15,37 @@ class QuotesPresenter: ViewToPresenterQuotesProtocol {
     var interactor: PresenterToInteractorQuotesProtocol?
     var router: PresenterToRouterQuotesProtocol?
     
+    var quotesStrings: [String]?
+    
     // MARK: Inputs from view
-    func fetchQuotes() {
-        print("Presenter is instructed to get quotes")
+    func viewDidLoad() {
+        print("Presenter is being notified that the View was loaded.")
         view?.showHUD()
         interactor?.loadQuotes()
     }
     
-    func didSelectQuoteAt(index: Int) {
-        interactor?.getQuote(at: index)
+    func numberOfRowsInSection() -> Int {
+        guard let quotesStrings = self.quotesStrings else {
+            return 0
+        }
+        
+        return quotesStrings.count
     }
     
-    func deselectQuoteAt(index: Int) {
+    func textLabelText(indexPath: IndexPath) -> String? {
+        guard let quotesStrings = self.quotesStrings else {
+            return nil
+        }
+        
+        return quotesStrings[indexPath.row]
+    }
+
+    
+    func didSelectRowAt(index: Int) {
+        interactor?.retrieveQuote(at: index)
+    }
+    
+    func deselectRowAt(index: Int) {
         view?.deselectRowAt(row: index)
     }
     
@@ -37,8 +56,9 @@ extension QuotesPresenter: InteractorToPresenterQuotesProtocol {
     
     func fetchQuotesSuccess(quotes: [APIQuote]) {
         print("Presenter receives the result from Interactor after it's done its job.")
+        self.quotesStrings = quotes.compactMap { $0.quote }
         view?.hideHUD()
-        view?.onFetchQuotesSuccess(quotes: quotes.compactMap { $0.quote })
+        view?.onFetchQuotesSuccess()
     }
     
     func fetchQuotesFailure(errorCode: Int) {

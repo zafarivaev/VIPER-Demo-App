@@ -11,7 +11,7 @@ import UIKit
 
 // MARK: View Output (Presenter -> View)
 protocol PresenterToViewQuotesProtocol {
-    func onFetchQuotesSuccess(quotes: [String])
+    func onFetchQuotesSuccess()
     func onFetchQuotesFailure(error: String)
     
     func showHUD()
@@ -28,10 +28,15 @@ protocol ViewToPresenterQuotesProtocol {
     var interactor: PresenterToInteractorQuotesProtocol? { get set }
     var router: PresenterToRouterQuotesProtocol? { get set }
     
-    func fetchQuotes()
+    var quotesStrings: [String]? { get set }
     
-    func didSelectQuoteAt(index: Int)
-    func deselectQuoteAt(index: Int)
+    func viewDidLoad()
+    
+    func numberOfRowsInSection() -> Int
+    func textLabelText(indexPath: IndexPath) -> String?
+    
+    func didSelectRowAt(index: Int)
+    func deselectRowAt(index: Int)
 
 }
 
@@ -42,7 +47,7 @@ protocol PresenterToInteractorQuotesProtocol {
     var presenter: InteractorToPresenterQuotesProtocol? { get set }
     
     func loadQuotes()
-    func getQuote(at index: Int)
+    func retrieveQuote(at index: Int)
 }
 
 

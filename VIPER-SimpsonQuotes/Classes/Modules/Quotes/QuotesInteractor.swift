@@ -15,7 +15,7 @@ class QuotesInteractor: PresenterToInteractorQuotesProtocol {
     var quotes: [APIQuote]?
     
     func loadQuotes() {
-        print("Interactor received the request from Presenter to load quotes from the server")
+        print("Interactor receives the request from Presenter to load quotes from the server.")
         QuoteService.shared.getQuotes(count: 10, success: { (code, quotes) in
             self.quotes = quotes
             self.presenter?.fetchQuotesSuccess(quotes: quotes)
@@ -24,7 +24,7 @@ class QuotesInteractor: PresenterToInteractorQuotesProtocol {
         }
     }
     
-    func getQuote(at index: Int) {
+    func retrieveQuote(at index: Int) {
         guard let quotes = self.quotes, quotes.indices.contains(index) else {
             self.presenter?.getQuoteFailure()
             return

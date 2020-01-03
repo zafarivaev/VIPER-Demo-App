@@ -13,7 +13,7 @@ class QuoteDetailRouter: PresenterToRouterQuoteDetailProtocol {
     
     // MARK: Static methods
     static func createModule(with quote: APIQuote) -> UIViewController {
-        
+        print("QuoteDetailRouter creates the QuoteDetail module.")
         let viewController = QuoteDetailViewController()
         
         let presenter: ViewToPresenterQuoteDetailProtocol & InteractorToPresenterQuoteDetailProtocol = QuoteDetailPresenter()

@@ -17,7 +17,6 @@ class QuoteService {
         let urlString = self.configureApiCall(Endpoints.QUOTES, "count", "\(10)")
         
         APIClient.shared.getArray(urlString: urlString, success: { (code, arrayOfQuotes) in
-            
             success(code, arrayOfQuotes)
             
         }) { (code) in

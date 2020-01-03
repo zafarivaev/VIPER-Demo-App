@@ -16,12 +16,11 @@ class QuotesViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
         
-        presenter?.fetchQuotes()
+        presenter?.viewDidLoad()
     }
 
     // MARK: - Properties
     var presenter: ViewToPresenterQuotesProtocol?
-    var quotes: [String] = []
     
     lazy var tableView: UITableView = {
         let tableView = UITableView()
@@ -35,14 +34,13 @@ class QuotesViewController: UIViewController {
 
 extension QuotesViewController: PresenterToViewQuotesProtocol{
     
-    func onFetchQuotesSuccess(quotes: [String]) {
-        print("View receives the response from presenter and updates itself.")
-        self.quotes = quotes
+    func onFetchQuotesSuccess() {
+        print("View receives the response from Presenter and updates itself.")
         self.tableView.reloadData()
     }
     
     func onFetchQuotesFailure(error: String) {
-        print("View receives the response from presenter and prints error: \(error)")
+        print("View receives the response from Presenter and prints error: \(error)")
     }
     
     func showHUD() {
@@ -62,18 +60,18 @@ extension QuotesViewController: PresenterToViewQuotesProtocol{
 extension QuotesViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return quotes.count
+        return presenter?.numberOfRowsInSection() ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        cell.textLabel?.text = quotes[indexPath.row]
+        cell.textLabel?.text = presenter?.textLabelText(indexPath: indexPath)
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        presenter?.didSelectQuoteAt(index: indexPath.row)
-        presenter?.deselectQuoteAt(index: indexPath.row)
+        presenter?.didSelectRowAt(index: indexPath.row)
+        presenter?.deselectRowAt(index: indexPath.row)
     }
 }
 

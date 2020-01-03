@@ -15,7 +15,7 @@ class QuoteDetailInteractor: PresenterToInteractorQuoteDetailProtocol {
     var quote: APIQuote?
     
     func getImageFromURL() {
-        print("Interactor received the request from Presenter to get image data from the server.")
+        print("Interactor receives the request from Presenter to get image data from the server.")
         KingfisherService.shared.loadImageFrom(urlString: quote!.image!, success: { (data) in
             self.presenter?.getImageFromURLSuccess(quote: self.quote!, data: data)
         }) { (error) in
