@@ -36,7 +36,7 @@ protocol PresenterToInteractorQuoteDetailProtocol {
     
     var quote: APIQuote? { get set }
     
-    func getImageFromURL()
+    func getImageDataFromURL()
     
 }
 
@@ -52,5 +52,6 @@ protocol InteractorToPresenterQuoteDetailProtocol {
 
 // MARK: Router Input (Presenter -> Router)
 protocol PresenterToRouterQuoteDetailProtocol {
+    
     static func createModule(with quote: APIQuote) -> UIViewController
 }

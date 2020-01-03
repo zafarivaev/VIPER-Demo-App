@@ -68,5 +68,7 @@ protocol InteractorToPresenterQuotesProtocol {
 // MARK: Router Input (Presenter -> Router)
 protocol PresenterToRouterQuotesProtocol {
     
+    static func createModule() -> UINavigationController
+    
     func pushToQuoteDetail(on view: PresenterToViewQuotesProtocol, with quote: APIQuote)
 }

@@ -17,7 +17,7 @@ class QuoteDetailPresenter: ViewToPresenterQuoteDetailProtocol {
     
     func viewDidLoad() {
         print("Presenter is instructed to get image from url.")
-        interactor?.getImageFromURL()
+        interactor?.getImageDataFromURL()
     }
     
 }
