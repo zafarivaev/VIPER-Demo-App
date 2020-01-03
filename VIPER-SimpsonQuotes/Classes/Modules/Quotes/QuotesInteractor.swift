@@ -11,7 +11,7 @@ import Foundation
 class QuotesInteractor: PresenterToInteractorQuotesProtocol {
     
     // MARK: Properties
-    var presenter: InteractorToPresenterQuotesProtocol?
+    weak var presenter: InteractorToPresenterQuotesProtocol?
     var quotes: [APIQuote]?
     
     func loadQuotes() {

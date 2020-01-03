@@ -11,7 +11,7 @@ import Foundation
 class QuoteDetailInteractor: PresenterToInteractorQuoteDetailProtocol {
     
     // MARK: Properties
-    var presenter: InteractorToPresenterQuoteDetailProtocol?
+    weak var presenter: InteractorToPresenterQuoteDetailProtocol?
     var quote: APIQuote?
     
     func getImageDataFromURL() {

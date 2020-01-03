@@ -10,7 +10,7 @@ import UIKit
 
 
 // MARK: View Output (Presenter -> View)
-protocol PresenterToViewQuotesProtocol {
+protocol PresenterToViewQuotesProtocol: class {
     func onFetchQuotesSuccess()
     func onFetchQuotesFailure(error: String)
     
@@ -22,7 +22,7 @@ protocol PresenterToViewQuotesProtocol {
 
 
 // MARK: View Input (View -> Presenter)
-protocol ViewToPresenterQuotesProtocol {
+protocol ViewToPresenterQuotesProtocol: class {
     
     var view: PresenterToViewQuotesProtocol? { get set }
     var interactor: PresenterToInteractorQuotesProtocol? { get set }
@@ -44,7 +44,7 @@ protocol ViewToPresenterQuotesProtocol {
 
 
 // MARK: Interactor Input (Presenter -> Interactor)
-protocol PresenterToInteractorQuotesProtocol {
+protocol PresenterToInteractorQuotesProtocol: class {
     
     var presenter: InteractorToPresenterQuotesProtocol? { get set }
     
@@ -54,7 +54,7 @@ protocol PresenterToInteractorQuotesProtocol {
 
 
 // MARK: Interactor Output (Interactor -> Presenter)
-protocol InteractorToPresenterQuotesProtocol {
+protocol InteractorToPresenterQuotesProtocol: class {
     
     func fetchQuotesSuccess(quotes: [APIQuote])
     func fetchQuotesFailure(errorCode: Int)
@@ -66,7 +66,7 @@ protocol InteractorToPresenterQuotesProtocol {
 
 
 // MARK: Router Input (Presenter -> Router)
-protocol PresenterToRouterQuotesProtocol {
+protocol PresenterToRouterQuotesProtocol: class {
     
     static func createModule() -> UINavigationController
     

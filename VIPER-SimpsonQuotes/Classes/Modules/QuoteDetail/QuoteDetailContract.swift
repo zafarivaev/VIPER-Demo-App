@@ -10,7 +10,7 @@ import UIKit
 
 
 // MARK: View Output (Presenter -> View)
-protocol PresenterToViewQuoteDetailProtocol {
+protocol PresenterToViewQuoteDetailProtocol: class {
     
     func onGetImageFromURLSuccess(_ quote: String, character: String, image: UIImage)
     func onGetImageFromURLFailure(_ quote: String, character: String)
@@ -18,7 +18,7 @@ protocol PresenterToViewQuoteDetailProtocol {
 
 
 // MARK: View Input (View -> Presenter)
-protocol ViewToPresenterQuoteDetailProtocol {
+protocol ViewToPresenterQuoteDetailProtocol: class {
     
     var view: PresenterToViewQuoteDetailProtocol? { get set }
     var interactor: PresenterToInteractorQuoteDetailProtocol? { get set }
@@ -30,7 +30,7 @@ protocol ViewToPresenterQuoteDetailProtocol {
 
 
 // MARK: Interactor Input (Presenter -> Interactor)
-protocol PresenterToInteractorQuoteDetailProtocol {
+protocol PresenterToInteractorQuoteDetailProtocol: class {
     
     var presenter: InteractorToPresenterQuoteDetailProtocol? { get set }
     
@@ -42,7 +42,7 @@ protocol PresenterToInteractorQuoteDetailProtocol {
 
 
 // MARK: Interactor Output (Interactor -> Presenter)
-protocol InteractorToPresenterQuoteDetailProtocol {
+protocol InteractorToPresenterQuoteDetailProtocol: class {
     
     func getImageFromURLSuccess(quote: APIQuote, data: Data?)
     func getImageFromURLFailure(quote: APIQuote)
@@ -51,7 +51,7 @@ protocol InteractorToPresenterQuoteDetailProtocol {
 
 
 // MARK: Router Input (Presenter -> Router)
-protocol PresenterToRouterQuoteDetailProtocol {
+protocol PresenterToRouterQuoteDetailProtocol: class {
     
     static func createModule(with quote: APIQuote) -> UIViewController
 }

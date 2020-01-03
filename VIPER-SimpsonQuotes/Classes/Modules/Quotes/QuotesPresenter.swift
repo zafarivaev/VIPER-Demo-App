@@ -11,7 +11,7 @@ import Foundation
 class QuotesPresenter: ViewToPresenterQuotesProtocol {
     
     // MARK: Properties
-    var view: PresenterToViewQuotesProtocol?
+    weak var view: PresenterToViewQuotesProtocol?
     var interactor: PresenterToInteractorQuotesProtocol?
     var router: PresenterToRouterQuotesProtocol?
     
