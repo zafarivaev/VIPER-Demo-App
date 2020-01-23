@@ -16,7 +16,7 @@ class QuotesInteractor: PresenterToInteractorQuotesProtocol {
     
     func loadQuotes() {
         print("Interactor receives the request from Presenter to load quotes from the server.")
-        QuoteService.shared.getQuotes(count: 10, success: { (code, quotes) in
+        QuoteService.shared.getQuotes(count: 6, success: { (code, quotes) in
             self.quotes = quotes
             self.presenter?.fetchQuotesSuccess(quotes: quotes)
         }) { (code) in

@@ -6,7 +6,6 @@
 //  Copyright © 2020 Zafar. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 class QuotesRouter: PresenterToRouterQuotesProtocol {

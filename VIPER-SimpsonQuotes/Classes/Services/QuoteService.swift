@@ -14,7 +14,7 @@ class QuoteService {
     
     func getQuotes(count: Int, success: @escaping (Int, [APIQuote]) -> (), failure: @escaping (Int) -> ()) {
         
-        let urlString = self.configureApiCall(Endpoints.QUOTES, "count", "\(10)")
+        let urlString = self.configureApiCall(Endpoints.QUOTES, "count", "\(count)")
         
         APIClient.shared.getArray(urlString: urlString, success: { (code, arrayOfQuotes) in
             success(code, arrayOfQuotes)
