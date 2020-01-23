@@ -56,10 +56,10 @@ protocol PresenterToInteractorQuotesProtocol: class {
 // MARK: Interactor Output (Interactor -> Presenter)
 protocol InteractorToPresenterQuotesProtocol: class {
     
-    func fetchQuotesSuccess(quotes: [APIQuote])
+    func fetchQuotesSuccess(quotes: [Quote])
     func fetchQuotesFailure(errorCode: Int)
     
-    func getQuoteSuccess(_ quote: APIQuote)
+    func getQuoteSuccess(_ quote: Quote)
     func getQuoteFailure()
     
 }
@@ -70,5 +70,5 @@ protocol PresenterToRouterQuotesProtocol: class {
     
     static func createModule() -> UINavigationController
     
-    func pushToQuoteDetail(on view: PresenterToViewQuotesProtocol, with quote: APIQuote)
+    func pushToQuoteDetail(on view: PresenterToViewQuotesProtocol, with quote: Quote)
 }

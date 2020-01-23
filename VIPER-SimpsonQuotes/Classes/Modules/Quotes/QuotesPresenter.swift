@@ -59,7 +59,7 @@ class QuotesPresenter: ViewToPresenterQuotesProtocol {
 // MARK: - Outputs to view
 extension QuotesPresenter: InteractorToPresenterQuotesProtocol {
     
-    func fetchQuotesSuccess(quotes: [APIQuote]) {
+    func fetchQuotesSuccess(quotes: [Quote]) {
         print("Presenter receives the result from Interactor after it's done its job.")
         self.quotesStrings = quotes.compactMap { $0.quote }
         view?.hideHUD()
@@ -72,7 +72,7 @@ extension QuotesPresenter: InteractorToPresenterQuotesProtocol {
         view?.onFetchQuotesFailure(error: "Couldn't fetch quotes: \(errorCode)")
     }
     
-    func getQuoteSuccess(_ quote: APIQuote) {
+    func getQuoteSuccess(_ quote: Quote) {
         router?.pushToQuoteDetail(on: view!, with: quote)
     }
     

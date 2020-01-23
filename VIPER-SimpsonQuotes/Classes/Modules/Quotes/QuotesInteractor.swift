@@ -12,7 +12,7 @@ class QuotesInteractor: PresenterToInteractorQuotesProtocol {
     
     // MARK: Properties
     weak var presenter: InteractorToPresenterQuotesProtocol?
-    var quotes: [APIQuote]?
+    var quotes: [Quote]?
     
     func loadQuotes() {
         print("Interactor receives the request from Presenter to load quotes from the server.")

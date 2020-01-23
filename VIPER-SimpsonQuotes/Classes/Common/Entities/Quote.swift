@@ -8,7 +8,7 @@
 
 import ObjectMapper
 
-struct APIQuote: Mappable {
+struct Quote: Mappable {
     
     var quote: String?
     var character: String?

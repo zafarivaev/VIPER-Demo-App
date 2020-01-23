@@ -30,7 +30,7 @@ class QuotesRouter: PresenterToRouterQuotesProtocol {
     }
     
     // MARK: - Navigation
-    func pushToQuoteDetail(on view: PresenterToViewQuotesProtocol, with quote: APIQuote) {
+    func pushToQuoteDetail(on view: PresenterToViewQuotesProtocol, with quote: Quote) {
         print("QuotesRouter is instructed to push QuoteDetailViewController onto the navigation stack.")
         let quoteDetailViewController = QuoteDetailRouter.createModule(with: quote)
             

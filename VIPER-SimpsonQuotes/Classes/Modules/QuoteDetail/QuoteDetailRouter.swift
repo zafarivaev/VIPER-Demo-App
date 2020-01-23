@@ -12,7 +12,7 @@ import UIKit
 class QuoteDetailRouter: PresenterToRouterQuoteDetailProtocol {
     
     // MARK: Static methods
-    static func createModule(with quote: APIQuote) -> UIViewController {
+    static func createModule(with quote: Quote) -> UIViewController {
         print("QuoteDetailRouter creates the QuoteDetail module.")
         let viewController = QuoteDetailViewController()
         

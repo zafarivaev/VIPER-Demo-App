@@ -15,9 +15,8 @@
 		1C3331CD23BE219D006A6DD4 /* QuotesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3331C823BE219D006A6DD4 /* QuotesRouter.swift */; };
 		1C3331CE23BE219D006A6DD4 /* QuotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3331C923BE219D006A6DD4 /* QuotesViewController.swift */; };
 		1C3331CF23BE219D006A6DD4 /* QuotesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3331CA23BE219D006A6DD4 /* QuotesInteractor.swift */; };
-		1C3331D523BE2E55006A6DD4 /* APIQuote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3331D423BE2E55006A6DD4 /* APIQuote.swift */; };
+		1C3331D523BE2E55006A6DD4 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3331D423BE2E55006A6DD4 /* Quote.swift */; };
 		1CDEB5BD23BF22A200487615 /* ImageDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CDEB5BC23BF22A200487615 /* ImageDataService.swift */; };
-		1CDEB5BF23BF23DA00487615 /* ConvertedQuote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CDEB5BE23BF23DA00487615 /* ConvertedQuote.swift */; };
 		1CDEB5C123BF28B400487615 /* KingfisherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CDEB5C023BF28B400487615 /* KingfisherService.swift */; };
 		1CE0CA7223BE483D000B6E63 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE0CA7123BE483D000B6E63 /* APIManager.swift */; };
 		1CE0CA7423BE4A02000B6E63 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE0CA7323BE4A02000B6E63 /* APIClient.swift */; };
@@ -42,9 +41,8 @@
 		1C3331C823BE219D006A6DD4 /* QuotesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesRouter.swift; sourceTree = "<group>"; };
 		1C3331C923BE219D006A6DD4 /* QuotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesViewController.swift; sourceTree = "<group>"; };
 		1C3331CA23BE219D006A6DD4 /* QuotesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesInteractor.swift; sourceTree = "<group>"; };
-		1C3331D423BE2E55006A6DD4 /* APIQuote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIQuote.swift; sourceTree = "<group>"; };
+		1C3331D423BE2E55006A6DD4 /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 		1CDEB5BC23BF22A200487615 /* ImageDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDataService.swift; sourceTree = "<group>"; };
-		1CDEB5BE23BF23DA00487615 /* ConvertedQuote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertedQuote.swift; sourceTree = "<group>"; };
 		1CDEB5C023BF28B400487615 /* KingfisherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingfisherService.swift; sourceTree = "<group>"; };
 		1CE0CA7123BE483D000B6E63 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		1CE0CA7323BE4A02000B6E63 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
@@ -170,8 +168,7 @@
 		1C3331D323BE2E4C006A6DD4 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				1C3331D423BE2E55006A6DD4 /* APIQuote.swift */,
-				1CDEB5BE23BF23DA00487615 /* ConvertedQuote.swift */,
+				1C3331D423BE2E55006A6DD4 /* Quote.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -348,7 +345,6 @@
 			files = (
 				1CDEB5C123BF28B400487615 /* KingfisherService.swift in Sources */,
 				1CE0CA7223BE483D000B6E63 /* APIManager.swift in Sources */,
-				1CDEB5BF23BF23DA00487615 /* ConvertedQuote.swift in Sources */,
 				1C3331CC23BE219D006A6DD4 /* QuotesPresenter.swift in Sources */,
 				1CE0CA8423BE72F1000B6E63 /* QuoteDetailInteractor.swift in Sources */,
 				1CE0CA7623BE4A0C000B6E63 /* QuoteService.swift in Sources */,
@@ -359,7 +355,7 @@
 				1CDEB5BD23BF22A200487615 /* ImageDataService.swift in Sources */,
 				1C3331CE23BE219D006A6DD4 /* QuotesViewController.swift in Sources */,
 				1C01723A23BD115E00B80FCE /* AppDelegate.swift in Sources */,
-				1C3331D523BE2E55006A6DD4 /* APIQuote.swift in Sources */,
+				1C3331D523BE2E55006A6DD4 /* Quote.swift in Sources */,
 				1C3331CD23BE219D006A6DD4 /* QuotesRouter.swift in Sources */,
 				1CE0CA7423BE4A02000B6E63 /* APIClient.swift in Sources */,
 				1CE0CA8123BE72F1000B6E63 /* QuoteDetailPresenter.swift in Sources */,

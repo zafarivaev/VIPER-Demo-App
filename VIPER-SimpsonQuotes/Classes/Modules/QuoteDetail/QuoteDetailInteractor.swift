@@ -12,7 +12,7 @@ class QuoteDetailInteractor: PresenterToInteractorQuoteDetailProtocol {
     
     // MARK: Properties
     weak var presenter: InteractorToPresenterQuoteDetailProtocol?
-    var quote: APIQuote?
+    var quote: Quote?
     
     func getImageDataFromURL() {
         print("Interactor receives the request from Presenter to get image data from the server.")

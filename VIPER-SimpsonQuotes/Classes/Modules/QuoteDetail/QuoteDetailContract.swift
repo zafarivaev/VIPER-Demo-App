@@ -34,7 +34,7 @@ protocol PresenterToInteractorQuoteDetailProtocol: class {
     
     var presenter: InteractorToPresenterQuoteDetailProtocol? { get set }
     
-    var quote: APIQuote? { get set }
+    var quote: Quote? { get set }
     
     func getImageDataFromURL()
     
@@ -44,8 +44,8 @@ protocol PresenterToInteractorQuoteDetailProtocol: class {
 // MARK: Interactor Output (Interactor -> Presenter)
 protocol InteractorToPresenterQuoteDetailProtocol: class {
     
-    func getImageFromURLSuccess(quote: APIQuote, data: Data?)
-    func getImageFromURLFailure(quote: APIQuote)
+    func getImageFromURLSuccess(quote: Quote, data: Data?)
+    func getImageFromURLFailure(quote: Quote)
     
 }
 
@@ -53,5 +53,5 @@ protocol InteractorToPresenterQuoteDetailProtocol: class {
 // MARK: Router Input (Presenter -> Router)
 protocol PresenterToRouterQuoteDetailProtocol: class {
     
-    static func createModule(with quote: APIQuote) -> UIViewController
+    static func createModule(with quote: Quote) -> UIViewController
 }

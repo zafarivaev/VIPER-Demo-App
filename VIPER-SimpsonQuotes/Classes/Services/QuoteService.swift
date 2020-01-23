@@ -12,7 +12,7 @@ class QuoteService {
     
     static let shared = { QuoteService() }()
     
-    func getQuotes(count: Int, success: @escaping (Int, [APIQuote]) -> (), failure: @escaping (Int) -> ()) {
+    func getQuotes(count: Int, success: @escaping (Int, [Quote]) -> (), failure: @escaping (Int) -> ()) {
         
         let urlString = self.configureApiCall(Endpoints.QUOTES, "count", "\(count)")
         

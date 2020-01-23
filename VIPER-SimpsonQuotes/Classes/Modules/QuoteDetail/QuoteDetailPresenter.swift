@@ -24,14 +24,13 @@ class QuoteDetailPresenter: ViewToPresenterQuoteDetailProtocol {
 
 extension QuoteDetailPresenter: InteractorToPresenterQuoteDetailProtocol {
     
-    func getImageFromURLSuccess(quote: APIQuote, data: Data?) {
+    func getImageFromURLSuccess(quote: Quote, data: Data?) {
         print("Presenter receives the result from Interactor after it's done its job.")
-        let convertedQuote = ConvertedQuote(quote: quote.quote!, character: quote.character!, image: ImageDataService.shared.convertToUIImage(from: data!), characterDirection: quote.characterDirection!)
 
-        view?.onGetImageFromURLSuccess(convertedQuote.quote!, character: convertedQuote.character!, image: convertedQuote.image!)
+        view?.onGetImageFromURLSuccess(quote.quote!, character: quote.character!, image: ImageDataService.shared.convertToUIImage(from: data!))
     }
     
-    func getImageFromURLFailure(quote: APIQuote) {
+    func getImageFromURLFailure(quote: Quote) {
         print("Presenter receives the result from Interactor after it's done its job.")
         view?.onGetImageFromURLFailure(quote.quote!, character: quote.character!)
     }
